@@ -44,16 +44,107 @@ void task3()
 
 }
 
+//zadania
+//Napisz program, który poprosi użytkownika o podanie długości boku a i b prostokąta, a następnie obliczy i wyświetli pole prostokąta.
+
+void task4()
+{
+    float bok_a, bok_b;
+
+    std::cout << "\npodaj dlugosc boku a\n";
+    std::cin >> bok_a;
+
+    std::cout << "\npodaj dlugosc boku b\n";
+    std::cin >> bok_b;
+
+    float area_of_square = bok_a *bok_b;
+    std::cout << "\npole kwadratu wynosi\n" << area_of_square;
+}
+
+//Napisz program, który poprosi użytkownika o podanie długości podstawy i wysokości trójkąta, a następnie obliczy pole tego trójkąta, wyświetlając wynik.
+
+void task5()
+{
+    float a, h;
+
+    std::cout << "\npodaj dlugosc boku podstawy\n";
+    std::cin >> a;
+
+    std::cout << "\npodaj wysokosc\n";
+    std::cin >> h;
+
+    float area_of_triangle = a * h;
+    std::cout << "\npole trojkata wynosi \n" << area_of_triangle;
+}
+
+//Napisz program, który poprosi użytkownika o podanie promienia koła i obliczy pole tego koła, wyświetlając wynik.
+
+void task6()
+{
+    
+    float r;
+
+    std::cout << "\npodaj promien kola\n";
+    std::cin >> r;
+
+    float n = 3.14;
+
+    float area_of_circle = r * n;
+    
+    std::cout << "pole kola wynosi " << area_of_circle;
+}
+
+//Napisz program, który poprosi użytkownika o podanie długości podstawy a, podstawy b i wysokości h trapezu, a następnie obliczy pole tego trapezu, wyświetlając wynik.
+
+void task7()
+{
+
+    float bok_a, bok_b, h;
+
+    std::cout << "\npodaj bok a\n";
+    std::cin >> bok_a;
+
+    std::cout << "\npodaj bok b\n";
+    std::cin >> bok_b;
+    
+    std::cout << "\npodaj wysokosc\n";
+    std::cin >> h;
+
+    float area_of_trapeze =  ( bok_a + bok_b ) * h / 2;
+
+    std::cout << "pole trapezu wynosi " << area_of_trapeze;
+}
+
+void task8()
+{
+
+    float bok_a, 
+
+    std::cout << "\npodaj bok a\n";
+    std::cin >> bok_a;
+
+    float area_of_trapeze = (bok_a + bok_b) * h / 2;
+
+    std::cout << "objetosc szesciokata wynosi " << area_of_trapeze;
+
+}
 
 int main()
 {
 
-    task1();
+    //task1();
 
-    task2();
+    //task2();
 
-    task3();
+    //task3();
 
+    task4();
+
+    task5();
+
+    task6();
+
+    task7();
 }
 
 /*
