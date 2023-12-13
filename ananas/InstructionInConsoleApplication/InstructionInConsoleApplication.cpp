@@ -34,7 +34,7 @@ t t       t			  t
 */
 
 //napisz program ktory pobierze liczbe od uzytkownika i wyswietli czy jest ona dodatnia czy nie
-//wersja 1
+//wersja 1 
 void task1()
 {
 	int number;
