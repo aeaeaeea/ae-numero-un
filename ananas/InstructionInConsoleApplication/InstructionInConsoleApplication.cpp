@@ -25,6 +25,8 @@ operatory logiczne:
 && and\lub
 ! not/nie
 
+a
+
 A B		A || B		A && B
 f f       f			  f
 t f       t			  f
