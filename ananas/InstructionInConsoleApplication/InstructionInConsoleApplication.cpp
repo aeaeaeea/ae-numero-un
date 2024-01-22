@@ -138,9 +138,64 @@ void task5()
 }
 
 
+
+void task6()
+{
+	int firstNumber;
+	std::cout << "podaj liczbe\n";
+	std::cin >> firstNumber;
+
+	std::cout << "najwieksza wartosc to " << firstNumber << "\n";
+} 
+
+void task7()
+{ 
+	int firstNumber,secondNumber;
+	std::cout << "podaj liczbe 1\n";
+	std::cin >> firstNumber;
+
+	std::cout << "podaj liczbe 2\n";
+	std::cin >> secondNumber;
+
+	if (secondNumber > firstNumber)
+	{
+		std::cout << "najwieksza liczba to " << secondNumber << "\n";
+	}
+	else
+	{
+		std::cout << "najwieksza liczba to " << firstNumber << "\n";
+	}
+}
+
+void task8()
+{
+	int firstNumber, secondNumber, thirdNumber;
+
+	std::cout << "podaj liczbe 1\n";
+	std::cin >> firstNumber;
+
+	std::cout << "podaj liczbe 2\n";
+	std::cin >> secondNumber;
+
+	std::cout << "podaj liczbe 3\n";
+	std::cin >> thirdNumber;
+	
+	if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+	{
+		std::cout << "najwieksza liczba to " << thirdNumber << "\n";
+	}
+	else if (secondNumber > firstNumber)
+	{
+		std::cout << "najwieksza liczba to " << secondNumber << "\n";
+	}
+	else
+	{
+		std::cout << "najwieksza liczba to " << firstNumber << "\n";
+	}
+}
+
 int main()
 {
 	//task1();
-	task5
-	();
+	task8();
 }
