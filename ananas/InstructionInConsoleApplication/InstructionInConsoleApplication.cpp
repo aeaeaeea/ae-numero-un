@@ -8,14 +8,14 @@
 
 * 
 *
-* Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny. Wyświetl odpowiedni komunikat.
-* Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną. Wyświetl wynik.
-* Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia. Wyświetl odpowiedni komunikat.
-* Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
-* Napisz program, który poprosi użytkownika o podanie oceny w skali 100-punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
-* Program wyświetlający odpowiedni komunikat w zależności od podanej oceny (np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
-* Napisz program, który na podstawie współczynników równania kwadratowego (a, b, c) sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
-* Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+*
+* 
+* 
+*
+* 
+* 
+* 
+* 
 
 */
 
@@ -478,40 +478,204 @@ void task17()
 	}
 	else if (number == 5)
 	{
-		std::cout << "piatek";
+		std::cout << "maj";
 	}
 	else if (number == 6)
 	{
-		std::cout << "sobota";
+		std::cout << "czerwiec";
 	}
 	else if (number == 7)
 	{
-		std::cout << "niedziela";
+		std::cout << "lipiec";
 	}
 	else if (number == 8)
 	{
-		std::cout << "sroda";
+		std::cout << "sierpien";
 	}
 	else if (number == 9)
 	{
-		std::cout << "czwartek";
+		std::cout << "wrzesien";
 	}
 	else if (number == 10)
 	{
-		std::cout << "piatek";
+		std::cout << "pazdziernik";
 	}
 	else if (number == 11)
 	{
-		std::cout << "sobota";
+		std::cout << "listopad";
 	}
 	else if (number == 12)
 	{
-		std::cout << "niedziela";
+		std::cout << "grudzien";
+	}
+}
+
+// Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny. Wyświetl odpowiedni komunikat.
+
+void task18()
+{
+	int year;
+	std::cout << "podaj rok\n";
+	std::cin >> year;
+
+	if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+	{
+		std::cout << "jest to rok przestepny";
+	}
+	else
+	{
+		std::cout << "nie jest to rok przestepny";
+	}
+}
+
+// Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną. Wyświetl wynik.
+
+void task19()
+{
+	double number;
+	std::cout << "podaj wartosć\n";
+	std::cin >> number;
+
+	double absoluteValue = (number * number) - ((number * number) - number);
+
+	std::cout << " wartosc bezwzgledna " << absoluteValue;
+}	
+
+//Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia. Wyświetl odpowiedni komunikat.
+
+void task20()
+{
+	int age;
+	std::cout << "podaj wiek";
+	std::cin >> age;
+
+	if (age >= 18)
+	{
+		std::cout << "osoba jest dorosla";
+	}
+	else
+	{
+		std::cout << "osoba nie jest dorosla";
+	}
+}
+
+//Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
+
+void task21()
+{
+	int lengthOne, lengthTwo, lengthThree;
+	std::cout << "podaj pierwsza dlugosc";
+	std::cin >> lengthOne;
+	std::cout << "podaj druga dlugosc";
+	std::cin >> lengthTwo;
+	std::cout << "podaj trzecia dlugosc";
+	std::cin >> lengthThree;
+
+	if (lengthOne > lengthTwo && lengthOne > lengthThree)
+	{
+		if (lengthOne > lengthThree + lengthTwo)
+		{
+			std::cout << "nie mozna zbudowac trojkata";
+		}
+		else
+		{
+			std::cout << "mozna zbudowac trojkat";
+		}
+	}
+	else if(lengthThree > lengthOne && lengthThree > lengthTwo)
+	{
+		if (lengthThree > lengthOne + lengthTwo)
+		{
+			std::cout << "nie mozna zbudowac trojkata";
+		}
+		else
+		{
+			std::cout << "mozna zbudowac trojkat";
+		}
+	}
+	else if (lengthTwo > lengthOne && lengthTwo > lengthThree)
+	{
+		if (lengthTwo > lengthOne + lengthThree)
+		{
+			std::cout << "nie mozna zbudowac trojkata";
+		}
+		else
+		{
+			std::cout << "mozna zbudowac trojkat";
+		}
+	}
+	else
+	{
+		std::cout << "nie mozna zbudowac trojkata";
+	}
+}
+
+//Program wyświetlający odpowiedni komunikat w zależności od podanej oceny(np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
+
+void task22()
+{
+	int grade;
+	std::cout << "podaj liczbe od 1 do 6";
+	std::cin >> grade;
+
+	if (grade == 1)
+	{
+		std::cout << "niedostateczny";
+	}
+	else if (grade == 2)
+	{
+		std::cout << "dopuszczajacy";
+	}
+	else if (grade == 3)
+	{
+		std::cout << "dostateczny";
+	}
+	else if (grade == 4)
+	{
+		std::cout << "dobry";
+	}
+	else if (grade == 5)
+	{
+		std::cout << "bardzo dobry";
+	}
+	else if (grade == 6)
+	{
+		std::cout << "celujacy";
+	}
+}
+
+////Napisz program, który poprosi użytkownika o podanie oceny w skali 100-punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
+
+void task23()
+{
+	int points;
+	std::cout << "podaj ilosc punktow";
+	std::cin >> points;
+
+	std::cout << points << "% procent";
+}
+
+//Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+
+void task25()
+{
+	int year, month, day;
+	std::cout << "podaj date(dzien, miesiac, rok)\n";
+	std::cin >> day >> month >> year;
+
+	if (day >= 1 && day <= 31 &&
+		month >= 1 && month <= 12)
+	{
+		std::cout << "jest to prawidlowa data";
+	}
+	else
+	{
+		std::cout << "nie jest to prawidlowa data";
 	}
 }
 
 int main()
 {
 	//task1();
-	task16();
+	task18();
 }
