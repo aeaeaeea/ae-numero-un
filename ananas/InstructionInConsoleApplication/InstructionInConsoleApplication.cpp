@@ -720,7 +720,7 @@ void task25()
 	}
 }
 
-//napisz program ktory wczyta od uzytkownika liczbe dodarina
+//napisz program ktory wczyta od uzytkownika liczbe dodarina a
 
 void task26()
 {
