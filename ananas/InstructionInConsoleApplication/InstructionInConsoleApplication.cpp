@@ -301,13 +301,13 @@ void task11()
 
 void task12()
 {
-	long long a, b;
+	long long numberOne, numberTwo;
 	std::cout << "podaj liczbe a\n";
-	std::cin >> a;
+	std::cin >> numberOne;
 	std::cout << "podaj liczbe b\n";
-	std::cin >> b;
+	std::cin >> numberTwo;
 
-	if (a == b)
+	if (numberOne == numberTwo)
 	{
 		std::cout << "liczbt sa rowne";
 	}
@@ -341,13 +341,13 @@ void task13()
 
 void task14()
 {
-	long long a;
+	long long number;
 	std::cout << "podaj liczbe\n";
-	std::cin >> a;
-	long long b = a % 2;
-	long long c = a % 2;
+	std::cin >> number;
+	long long restOfDividingByThree = number % 3;
+	long long restOfDividingByFive = number % 5;
 
-	if (b == 0 && c == 0)
+	if (restOfDividingByThree == 0 && restOfDividingByFive == 0)
 	{
 		std::cout << "liczba jest podzielna";
 	}
@@ -372,43 +372,43 @@ powyżej 40.0 - otyłość skrajną*/
 
 void task15()
 {
-	double kg, m;
+	double weightInKg, heightInMeter;
 	std::cout << "mase w kg\n";
-	std::cin >> kg;
+	std::cin >> weightInKg;
 	std::cout << "wzrost w m\n";
-	std::cin >> m;
+	std::cin >> heightInMeter;
 
-	double BMI = kg / ( m * m );
+	double bmi = weightInKg / ( heightInMeter * heightInMeter );
 
-	if (BMI >= 40)
+	if (bmi >= 40)
 	{
 		std::cout << "otyłosc skrajna\n";
 	}
-	else if (BMI <= 39.99 && BMI >= 35.0)
+	else if (bmi <= 39.99 && bmi >= 35.0)
 	{
 		std::cout << "II stopien otylosci";
 	}
-	else if (BMI <= 34.99 && BMI >= 30.0)
+	else if (bmi <= 34.99 && bmi >= 30.0)
 	{
 		std::cout << "I stopien otylosci\n";
 	}
-	else if (BMI <= 29.9 && BMI >= 25)
+	else if (bmi <= 29.9 && bmi >= 25)
 	{
 		std::cout << "nadwaga\n";
 	}
-	else if (BMI <= 24.99 && BMI >= 18.5)
+	else if (bmi <= 24.99 && bmi >= 18.5)
 	{
 		std::cout << "waga prawidlowa\n";
 	}
-	else if (BMI <= 18.49 && BMI >=17)
+	else if (bmi <= 18.49 && bmi >=17)
 	{
 		std::cout << "niedowaga\n";
 	}
-	else if (BMI <= 16.99 && BMI >= 16)
+	else if (bmi <= 16.99 && bmi >= 16)
 	{
 		std::cout << "wychudzenie\n";
 	}
-	else if (BMI < 16)
+	else if (bmi < 16)
 	{
 		std::cout << "wyglodzenie\n";
 	}
@@ -418,93 +418,106 @@ void task15()
 
 void task16()
 {
-	int number;
+	int dayOfTheWeek;
 	std::cout << "podaj liczbe calkowita od 1 do 7\n";
-	std::cin >> number;
+	std::cin >> dayOfTheWeek;
 
-	if (number == 1)
+	if (dayOfTheWeek == 1)
 	{
 		std::cout << "poniedzialek";
 	}
-	else if (number == 2)
+	else if (dayOfTheWeek == 2)
 	{
 		std::cout << "wtorek";
 	}
-	else if (number == 3)
+	else if (dayOfTheWeek == 3)
 	{
 		std::cout << "sroda";
 	}
-	else if (number == 4)
+	else if (dayOfTheWeek == 4)
 	{
 		std::cout << "czwartek";
 	}
-	else if (number == 5)
+	else if (dayOfTheWeek == 5)
 	{
 		std::cout << "piatek";
 	}
-	else if (number == 6)
+	else if (dayOfTheWeek == 6)
 	{
 		std::cout << "sobota";
 	}
-	else if (number == 7)
+	else if (dayOfTheWeek == 7)
 	{
 		std::cout << "niedziela";
 	}
+/*
+	switch(dayOfTheWeek)
+	{
+	case 1:
+		std::cout << "poniedzialek";
+		brake;
+	itd.
+	[jezeli zadne]
+	default:
+		std::cout << "nie ma takiego dnia tygodnia";
+		brake;
+	}
+*/
 }
 
 // Napisz program, który wczyta numer miesiąca i wyświetli jego słowny odpowiednik.
 
 void task17()
 {
-	int number;
+	int numberOfMonth;
 	std::cout << "podaj liczbe calkowita od 1 do 12\n";
-	std::cin >> number;
+	std::cin >> numberOfMonth;
 
-	if (number == 1)
+	if (numberOfMonth == 1)
 	{
 		std::cout << "styczen";
 	}
-	else if (number == 2)
+	else if (numberOfMonth == 2)
 	{
 		std::cout << "luty";
 	}
-	else if (number == 3)
+	else if (numberOfMonth == 3)
 	{
 		std::cout << "marzec";
 	}
-	else if (number == 4)
+	else if (numberOfMonth == 4)
 	{
 		std::cout << "kwiecien";
 	}
-	else if (number == 5)
+	else if (numberOfMonth == 5)
 	{
 		std::cout << "maj";
 	}
-	else if (number == 6)
+	else if (numberOfMonth == 6)
 	{
 		std::cout << "czerwiec";
 	}
-	else if (number == 7)
+	else if (numberOfMonth == 7)
 	{
 		std::cout << "lipiec";
 	}
-	else if (number == 8)
+	else if (numberOfMonth == 8)
 	{
 		std::cout << "sierpien";
 	}
-	else if (number == 9)
+	else if (numberOfMonth == 9)
 	{
 		std::cout << "wrzesien";
 	}
-	else if (number == 10)
+	else if (numberOfMonth == 10)
 	{
 		std::cout << "pazdziernik";
 	}
-	else if (number == 11)
+	else if (numberOfMonth == 11)
 	{
 		std::cout << "listopad";
 	}
-	else if (number == 12)
+	else if (numberOfMonth == 12)
 	{
 		std::cout << "grudzien";
 	}
@@ -536,9 +549,19 @@ void task19()
 	std::cout << "podaj wartosć\n";
 	std::cin >> number;
 
-	double absoluteValue = (number * number) - ((number * number) - number);
+	double absoluteValue;
 
-	std::cout << " wartosc bezwzgledna " << absoluteValue;
+	if (number >= 0)
+	{
+		absoluteValue = number;
+	}
+	else
+	{
+		absoluteValue = -number;
+	}
+	
+	
+	std::cout << absoluteValue;
 }	
 
 //Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia. Wyświetl odpowiedni komunikat.
@@ -563,17 +586,17 @@ void task20()
 
 void task21()
 {
-	int lengthOne, lengthTwo, lengthThree;
+	int firstLengthOfSide, secondLengthOfSide, thirdLengthOfSide;
 	std::cout << "podaj pierwsza dlugosc";
-	std::cin >> lengthOne;
+	std::cin >> firstLengthOfSide;
 	std::cout << "podaj druga dlugosc";
-	std::cin >> lengthTwo;
+	std::cin >> secondLengthOfSide;
 	std::cout << "podaj trzecia dlugosc";
-	std::cin >> lengthThree;
+	std::cin >> thirdLengthOfSide;
 
-	if (lengthOne > lengthTwo && lengthOne > lengthThree)
+	if (firstLengthOfSide > secondLengthOfSide && firstLengthOfSide > thirdLengthOfSide)
 	{
-		if (lengthOne > lengthThree + lengthTwo)
+		if (firstLengthOfSide > thirdLengthOfSide + secondLengthOfSide)
 		{
 			std::cout << "nie mozna zbudowac trojkata";
 		}
@@ -582,9 +605,9 @@ void task21()
 			std::cout << "mozna zbudowac trojkat";
 		}
 	}
-	else if(lengthThree > lengthOne && lengthThree > lengthTwo)
+	else if(thirdLengthOfSide > firstLengthOfSide && thirdLengthOfSide > secondLengthOfSide)
 	{
-		if (lengthThree > lengthOne + lengthTwo)
+		if (thirdLengthOfSide > firstLengthOfSide + secondLengthOfSide)
 		{
 			std::cout << "nie mozna zbudowac trojkata";
 		}
@@ -593,9 +616,9 @@ void task21()
 			std::cout << "mozna zbudowac trojkat";
 		}
 	}
-	else if (lengthTwo > lengthOne && lengthTwo > lengthThree)
+	else if (secondLengthOfSide > firstLengthOfSide && secondLengthOfSide > thirdLengthOfSide)
 	{
-		if (lengthTwo > lengthOne + lengthThree)
+		if (secondLengthOfSide > firstLengthOfSide + thirdLengthOfSide)
 		{
 			std::cout << "nie mozna zbudowac trojkata";
 		}
@@ -649,10 +672,33 @@ void task22()
 void task23()
 {
 	int points;
-	std::cout << "podaj ilosc punktow";
+	std::cout << "podaj ilosc punktow w zakresie od 1 do 100";
 	std::cin >> points;
 
-	std::cout << points << "% procent";
+	if (points >= 0 && points <= 29)
+	{
+		std::cout << "niedostateczny";
+	}
+	else if (points >= 30 && points <= 49)
+	{
+		std::cout << "dopuszczajecy";
+	}
+	if (points >= 50 && points <= 69)
+	{
+		std::cout << "dostateczny";
+	}
+	else if (points >= 70 && points <= 89)
+	{
+		std::cout << "dobry";
+	}
+	if (points >= 90 && points <= 95)
+	{
+		std::cout << "bardzo dobry";
+	}
+	else if (points >= 96 && points <= 100)
+	{
+		std::cout << "celujacy";
+	}
 }
 
 //Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
@@ -674,8 +720,39 @@ void task25()
 	}
 }
 
+//napisz program ktory wczyta od uzytkownika liczbe dodarina
+
+void task26()
+{
+	int number;
+	std::cout << "podaj liczbe dodatnia\n";
+	std::cin >> number;
+
+	while(number < 0)
+	{
+		std::cout << "podaj liczbe dodatnia\n";
+		std::cin >> number; 
+	}
+
+	std::cout << "podano liczbe " << number << "\n";
+}	
+
+void task27()
+{
+	int number;
+	std::cout << "podaj liczbe dodatnia\n";
+	std::cin >> number;
+
+	if (number < 0)
+	{
+		ELOOP;
+	}
+
+	std::cout << "podano liczbe " << number << "\n";
+}
+
 int main()
 {
 	//task1();
-	task18();
+	task26();
 }
