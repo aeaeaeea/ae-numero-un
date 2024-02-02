@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4027cdac-b94b-447b-ac1d-096a9a38a03b}</ProjectGuid>
-    <RootNamespace>InstructionInConsoleApplication</RootNamespace>
+    <ProjectGuid>{c85f2b59-8ad1-49ac-972f-67a8e2d4c93c}</ProjectGuid>
+    <RootNamespace>doWhile</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>InstructionIFConsoleApplication</ProjectName>
+    <ProjectName>doWhile(loop)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InstructionIfConsoleApplication.cpp" />
+    <ClCompile Include="doWhile.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

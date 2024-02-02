@@ -743,10 +743,11 @@ void task27()
 	std::cout << "podaj liczbe dodatnia\n";
 	std::cin >> number;
 
-	if (number < 0)
+	do
 	{
-		ELOOP;
-	}
+		std::cout << "podaj liczbe dodatnia\n";
+		std::cin >> number;
+	} while (number < 0);
 
 	std::cout << "podano liczbe " << number << "\n";
 }
