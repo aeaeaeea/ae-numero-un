@@ -153,9 +153,35 @@ void task4()
 	} while (upperRange >= tempNumber);
 }
 
+void task5()
+{
+	int number;
+	do
+	{
+		std::cout << "podaj liczbe dodatnia\n";
+		std::cin >> number;
+	} while (number < 0);
+
+	do
+	{
+		/*
+			tmpNumber = -1
+			do
+			{
+				tmpNumber++;
+			}while((number - tmpNumber) % 10 != 0);
+		*/
+
+		int rest = number % 10;
+		std::cout << rest << ", ";
+
+		number = number / 10;
+	} while (number > 0);
+}
+
 int main()
 {
-	task4();
+	task5();
 }
 
 
