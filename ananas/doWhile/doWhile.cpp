@@ -185,9 +185,104 @@ void task5()
 	std::cout << "suma wynosi " << sum;
 }
 
+/*
+* 
+* 
+* 
+*/
+//Napisz program, który poprosi użytkownika o wprowadzenie dowolnej liczby całkowitej. Następnie program powinien obliczyć i wyświetlić liczbę cyfr.
+void task6()
+{
+	int number;
+	do
+	{
+		std::cout << "podaj liczbe dodatnia\n";
+		std::cin >> number;
+	} while (number < 0);
+
+	int numberOfDigits = 0;
+
+	do
+	{
+			numberOfDigits++;
+		number = number / 10;
+	} while (number > 0);
+
+	std::cout << "ilosc cyfr wynosi " << numberOfDigits;
+}
+
+//Napisz program, który sprawdza czy więcej jest cyfr parzystych, czy nieparzystych we wczytanej liczbie.
+void task7()
+{
+	int number;
+	do
+	{
+		std::cout << "podaj liczbe dodatnia\n";
+		std::cin >> number;
+	} while (number < 0);
+
+	int numberOfEvenDigits = 0;
+	int numberOfUnevenDigits = 0;
+	int rest = 0;
+
+	do
+	{
+		int rest = number % 10;
+
+		if (rest % 2 == 0)
+		{
+			numberOfEvenDigits++;
+		}
+		else
+		{
+			numberOfUnevenDigits++;
+		}
+		number = number / 10;
+	} while (number > 0);
+
+	std::cout << "ilosc cyfr parzystych wynosi " << numberOfEvenDigits << "\n";
+	std::cout << "ilosc cyfr nieparzystych wynosi " << numberOfUnevenDigits << "\n";
+
+	if (numberOfEvenDigits > numberOfUnevenDigits)
+	{
+		std::cout << "jest wiecej cyfr parzystych\n";
+	}
+	else
+	{
+		std::cout << "jest wiecej cyfr nieparzystych\n";
+	}
+}
+
+//Poproś użytkownika o podawanie liczb, aż wprowadzi zero. Oblicz sumę oraz średnią arytmetyczną wprowadzonych liczb.
+void task8()
+{
+	int numberFromUser = 1;
+	int sumOfDigits = 0;
+	int sum = 0;
+	int numberOfAttempts = 0;
+
+	do
+	{
+		std::cout << "podaj liczbe dodatnia\n";
+		std::cin >> numberFromUser;
+
+		sum = numberFromUser + sum;
+
+		numberOfAttempts++;
+
+	} while (numberFromUser != 0);
+
+	numberOfAttempts--;
+
+	std::cout << "suma liczb wynosi " << sum << "\n";
+
+	int avarage = sum / numberOfAttempts;
+	std::cout << "srednia liczb wynosi " << avarage << "\n";
+}
+
 int main()
 {
-	task5();
+	task6();
 }
 
 
