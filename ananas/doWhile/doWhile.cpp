@@ -162,6 +162,8 @@ void task5()
 		std::cin >> number;
 	} while (number < 0);
 
+	int sum = 0;
+
 	do
 	{
 		/*
@@ -176,7 +178,11 @@ void task5()
 		std::cout << rest << ", ";
 
 		number = number / 10;
+
+		sum = rest + sum;
 	} while (number > 0);
+
+	std::cout << "suma wynosi " << sum;
 }
 
 int main()
