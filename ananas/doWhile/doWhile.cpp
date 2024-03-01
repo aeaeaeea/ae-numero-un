@@ -204,7 +204,7 @@ void task6()
 
 	do
 	{
-			numberOfDigits++;
+		numberOfDigits++;
 		number = number / 10;
 	} while (number > 0);
 
