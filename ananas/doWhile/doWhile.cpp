@@ -254,7 +254,7 @@ void task7()
 }
 
 //Poproś użytkownika o podawanie liczb, aż wprowadzi zero. Oblicz sumę oraz średnią arytmetyczną wprowadzonych liczb.
-void task8()
+void task8() 
 {
 	int numberFromUser = 1;
 	int sumOfDigits = 0;
@@ -278,6 +278,33 @@ void task8()
 
 	int avarage = sum / numberOfAttempts;
 	std::cout << "srednia liczb wynosi " << avarage << "\n";
+}
+
+void task9()
+{
+	int number;
+	do
+	{
+		std::cout << "podaj liczbe dodatnia\n";
+		std::cin >> number;
+	} while (number < 0);
+
+	int numberOfDigits = 1;
+
+	/*do
+	{
+		numberOfDigits++;
+		number = number / 10;
+	} while (number > 0);
+
+	*/
+
+	while (number > 9)
+	{
+		numberOfDigits++;
+		number = number / 10;
+	}
+	std::cout << "ilosc cyfr wynosi " << numberOfDigits;
 }
 
 int main()
