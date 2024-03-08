@@ -88,7 +88,48 @@ void task3()
 	}
 }
 
+void task4()
+{
+	int number;
+	std::cout << "podaj liczbe dodatnia\n";
+	std::cin >> number;
+
+	 int tmpNumber = number;
+	 int reverseNumber = 0;
+
+	 while(tmpNumber > 0)
+	 {
+		int rest = tmpNumber % 10;
+		reverseNumber =  reverseNumber * 10 + rest;
+		tmpNumber = tmpNumber / 10;
+	 }
+
+	 if(reverseNumber == number)
+	 {
+		std::cout << "liczba jest palindromem\n";
+	 }
+	 else
+	 {
+		std::cout << "liczba nie jest palindromem\n";
+	 }
+}
+
+void task5()
+{
+	int number;
+	std::cout << "podaj liczbe dodatnia\n";
+	std::cin >> number;
+
+	int counter = 0;
+
+	while (counter != number)
+	{
+		std::cout << "hello world\n";
+		counter++;
+	}
+}
+
 int main()
 {
-	task3();
+	task5();
 }
