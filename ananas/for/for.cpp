@@ -6,7 +6,7 @@
 * 
 * 
 * .
-* 
+* e
 * 
 * Program, który wczyta podstawę oraz wykładnik oraz wyliczy wynik.
 * Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
