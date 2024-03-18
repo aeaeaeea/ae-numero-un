@@ -9,16 +9,11 @@
 * e
 * 
 * 
-* Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
+* 
 
-* Program, kóry wyświetli poniższe wzory:
-	****     *       54321        121212        122333
-	***     ***      65432        212121        223334444
-	**     *****     76543        121212        333444455555
-	*     *******    87654        212121        444455555666666
 
-* Oblicz sumę szeregu 1/1^2 + 1/2^2 + 1/3^2 + ... +1/n^2. Jeżeli się nie pomylisz, to dla odpowiednio dużej wartości n po przemnożeniu jej przez 6 i spierwiastkowaniu powinieneś otrzymać wartość liczby π (suma szeregu jest równa π2/6). Zwróć uwagę, że pierwsza wartość indeksu to 1, a nie 0. Dokładność obliczeń można sprawdzić porównując z wartością odczytaną z własności Math.PI.
 
+* 
 * Napisz program, który rozkłoży liczbę na czynniki pierwsze.
 
 */
@@ -188,16 +183,56 @@ void task11()
 //Program, który wczyta podstawę oraz wykładnik oraz wyliczy wynik.
 void task12()
 {
+	int numberFromUser, numberOfPower, temp;
+	std::cout << "podaj liczbe\n";
+	std::cin >> numberFromUser;
+	std::cout << "podaj potege\n";
+	std::cin >> numberOfPower;
 
+	temp = numberFromUser;
+
+	for (int i = 1; i < numberOfPower; i++)
+	{
+		numberFromUser = numberFromUser * temp;
+	}
+	std::cout << numberFromUser;
 }
 
-//
+//Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
 void task13()
+{
+	int fibonacciNumber = 0, temp = 1, tempTwo = 0;
+
+	for (int i = 0; i < 20; i++)
+	{
+		tempTwo = fibonacciNumber;
+		std::cout << fibonacciNumber << ", ";
+		fibonacciNumber = fibonacciNumber + temp;
+		temp = tempTwo;
+	}
+}
+
+/* Program, kóry wyświetli poniższe wzory:
+****     *		54321        121212        122333
+*** 	***		65432        212121        223334444
+**	   *****	76543        121212        333444455555
+*     *******	87654        212121        444455555666666*/
+void task14()
+{
+	std::cout << "**** \n***\n** \n* \n";
+	std::cout << "\n   *\n  ***\n *****\n*******\n";
+	std::cout << "\n54321\n 65432\n 76543\n 87654\n";
+	std::cout << "\n121212\n 212121\n 121212\n 212121\n";
+	std::cout << "\n122333\n 223334444\n 333444455555\n 444455555666666";
+}
+
+//Oblicz sumę szeregu 1/1^2 + 1/2^2 + 1/3^2 + ... +1/n^2. Jeżeli się nie pomylisz, to dla odpowiednio dużej wartości n po przemnożeniu jej przez 6 i spierwiastkowaniu powinieneś otrzymać wartość liczby π (suma szeregu jest równa π2/6). Zwróć uwagę, że pierwsza wartość indeksu to 1, a nie 0. Dokładność obliczeń można sprawdzić porównując z wartością odczytaną z własności Math.PI.
+void task15()
 {
 
 }
 
 int main()
 {
-	task11();
+	task4();
 }
