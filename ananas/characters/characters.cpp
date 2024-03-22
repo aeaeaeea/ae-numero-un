@@ -6,7 +6,7 @@ using namespace std;
 void task1()
 {
 	char characterFromUser;
-	cout << "napisz pojedynczy znak\n";
+	cout << "napisz pojedynczy znak.\n";
 	cin >> characterFromUser;
 
 	cout << characterFromUser;
