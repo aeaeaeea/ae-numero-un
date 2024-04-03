@@ -54,7 +54,7 @@ void task3()
 	cout << "witaj " << nameFromUser;
 }
 
-//program ktory sprawdzi czy haslo jest poprawnea
+//program ktory sprawdzi czy haslo jest poprawne
 void task4()
 {
 	string passwordFromUser;
