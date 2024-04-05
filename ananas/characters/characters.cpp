@@ -71,7 +71,30 @@ void task4()
 	}
 }
 
+//napisz program ktory sprawdzi ile jest liter a
+void task5()
+{
+	string charactersFromUser;
+	cout << "podaj tekst\n";
+	cin >> charactersFromUser;
+
+	int counter = 0, textLength = charactersFromUser.length();
+
+	cout << "ostatni znak " << charactersFromUser[textLength - 1] << "\n";
+	 
+	for (int i = 0; i < textLength; i++)
+	{
+		if (charactersFromUser[i] == 'a')
+		{
+			counter++;
+		}
+	}
+	cout << "tekst ma " << counter << " malych liter a";
+}
+	
+	
+
 int main()
- {
-	task4();
+{
+	task5();
 }
