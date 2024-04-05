@@ -91,10 +91,54 @@ void task5()
 	}
 	cout << "tekst ma " << counter << " malych liter a";
 }
+
+//napisz program ktory prosi o haslo i nie przepusci jezeli haslo jest nieprawidlowe
+void task6()
+{
+	string passwordFromUser;
+
+	do
+	{
+		cout << "podaj haslo\n";
+		cin >> passwordFromUser;
+	} while (passwordFromUser != "pineapple");
+
+	cout << "poprawne haslo";
+}
 	
-	
+//podaj program ktory wyswietli ile jest samoglosek i spolglosed
+void task7()
+{
+	string charactersFromUser;
+	cout << "podaj tekst\n";
+	cin >> charactersFromUser;
+
+	int length = charactersFromUser.length(), counter = 0, counterTwo = 0;
+
+	for (int i = 0; i < length; i++)
+	{
+		if (charactersFromUser[i] == 'a' ||
+			charactersFromUser[i] == 'e' ||
+			charactersFromUser[i] == 'i' ||
+			charactersFromUser[i] == 'o' ||
+			charactersFromUser[i] == 'u' ||
+			charactersFromUser[i] == 'y')
+		{
+			counter++;
+		}
+		else
+		{
+			counterTwo++;
+		}
+	}
+
+	cout << "jest" << counter << "samoglosek\n";
+	cout << "jest" << counterTwo << "innych znakow\n";
+}
+
+//
 
 int main()
 {
-	task5();
+	task7();
 }
