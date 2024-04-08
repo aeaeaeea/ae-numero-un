@@ -136,9 +136,90 @@ void task7()
 	cout << "jest" << counterTwo << "innych znakow\n";
 }
 
-//
+/*
+*
+* 
+*
+* Program wyciągający informacje z numeru PESEL
+* Program implementujący algorytm szyfrowania Cezara(proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).*/
+
+//Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym.Następnie skonwertuj tę liczbę na system dwójkowy(binarny) i wyświetl wynik.
+void task8()
+{
+	int numberFromUser, rest = 0;
+	cout << "podaj liczbe calkowita\n";
+	cin >> numberFromUser;
+
+	int tmpNumber = numberFromUser;
+	string binary;
+
+	do
+	{
+		rest = numberFromUser % 2;
+		numberFromUser = numberFromUser / 2;
+		if (rest == 0)
+		{
+			binary = '0' + binary;
+		}
+		else
+		{
+			binary = '1' + binary;
+		}
+	} 
+	while (numberFromUser != 0);
+
+	std::cout << "liczba to " << tmpNumber << "    binarnie " << binary;
+}
+
+//Program sprawdzający czy podany ciąg znaków jest palindromem(czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+void task9()
+{
+	string charactersFromUser, reversedCharacters;
+	cout << "podaj znaki\n";
+	cin >> charactersFromUser;
+
+	int length = charactersFromUser.length();
+	
+	for (int i = 0; i < length; i++)
+	{
+		reversedCharacters = charactersFromUser[i] + reversedCharacters;
+	}
+	if (charactersFromUser == reversedCharacters)
+	{
+		cout << "liczba jest palindromem " << reversedCharacters;
+	}
+	else
+	{
+		cout << "liczba nie jest palindromem " << charactersFromUser << "    " << reversedCharacters;
+	}
+}
+
+// Program sprawdzający czy podane dwa słowa są anagramami(czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
+void task10()
+{
+	string charactersFromUser, charactersFromUserTwo;
+	cout << "podaj pierwszy wyraz\n";
+	cin >> charactersFromUser;
+
+	cout << "\npodaj drugi wyraz\n";
+	cin >> charactersFromUserTwo;
+
+	int length = charactersFromUser.length();
+	int lengthTwo = charactersFromUserTwo.length();
+
+	if (length == lengthTwo)
+	{
+		for (int i = 0; i < length; i++)
+		{
+			for (int j = 0; j < lengthTwo; j++)
+			{
+
+			}
+		}
+	}
+}
 
 int main()
 {
-	task7();
+	task9();
 }
