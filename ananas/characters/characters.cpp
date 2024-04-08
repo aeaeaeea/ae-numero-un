@@ -81,7 +81,7 @@ void task5()
 	int counter = 0, textLength = charactersFromUser.length();
 
 	cout << "ostatni znak " << charactersFromUser[textLength - 1] << "\n";
-	 
+
 	for (int i = 0; i < textLength; i++)
 	{
 		if (charactersFromUser[i] == 'a')
@@ -105,7 +105,7 @@ void task6()
 
 	cout << "poprawne haslo";
 }
-	
+
 //podaj program ktory wyswietli ile jest samoglosek i spolglosed
 void task7()
 {
@@ -138,10 +138,10 @@ void task7()
 
 /*
 *
-* 
 *
-* Program wyciągający informacje z numeru PESEL
-* Program implementujący algorytm szyfrowania Cezara(proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).*/
+*
+*
+* */
 
 //Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym.Następnie skonwertuj tę liczbę na system dwójkowy(binarny) i wyświetl wynik.
 void task8()
@@ -165,8 +165,7 @@ void task8()
 		{
 			binary = '1' + binary;
 		}
-	} 
-	while (numberFromUser != 0);
+	} while (numberFromUser != 0);
 
 	std::cout << "liczba to " << tmpNumber << "    binarnie " << binary;
 }
@@ -179,7 +178,7 @@ void task9()
 	cin >> charactersFromUser;
 
 	int length = charactersFromUser.length();
-	
+
 	for (int i = 0; i < length; i++)
 	{
 		reversedCharacters = charactersFromUser[i] + reversedCharacters;
@@ -207,19 +206,80 @@ void task10()
 	int length = charactersFromUser.length();
 	int lengthTwo = charactersFromUserTwo.length();
 
+	bool isAnagram = false;
+
 	if (length == lengthTwo)
 	{
 		for (int i = 0; i < length; i++)
 		{
+			isAnagram = false;
 			for (int j = 0; j < lengthTwo; j++)
 			{
-
+				if (charactersFromUser[i] == charactersFromUserTwo[j])
+				{
+					charactersFromUserTwo[j] = ' ';
+					isAnagram = true;
+					break;
+				}
+			}
+			if (!isAnagram)
+			{
+				break;
 			}
 		}
 	}
+	if (isAnagram)
+	{
+		cout << "liczba jest anagramem";
+	}
+	else
+	{
+		cout << "liczba nie jest anagramem";
+	}
+}
+
+//Program wyciągający informacje z numeru PESEL
+void task11()
+{
+	string charactersFromUser;
+	cout << "podaj PESEL";
+	cin >> charactersFromUser;
+
+	int length = charactersFromUser.length();
+
+	if (charactersFromUser[3] == 8 &&
+		charactersFromUser[3] == 9)
+	{
+
+	}
+}
+
+//Program implementujący algorytm szyfrowania Cezara(proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).
+void task12()
+{
+	string charactersFromUser, codedCharacters = " ", temp = " ";
+	cout << "podaj wyraz\n";
+	cin >> charactersFromUser;
+
+	int length = charactersFromUser.length();
+	for (int i = 0; i < length; i++)
+	{
+		if (charactersFromUser[i] >= 'a' &&
+			charactersFromUser[i] <= 'x')
+		{
+			temp = charactersFromUser[i] + 2;
+			codedCharacters = codedCharacters + temp;
+		}
+		else
+		{
+			temp = charactersFromUser[i] + 232;
+			codedCharacters = codedCharacters + temp;
+		}
+	}
+	cout << charactersFromUser << "    zaszyfrowane: " << codedCharacters;
 }
 
 int main()
 {
-	task9();
+	task11();
 }
