@@ -238,24 +238,8 @@ void task10()
 	}
 }
 
-//Program wyciągający informacje z numeru PESEL
-void task11()
-{
-	string charactersFromUser;
-	cout << "podaj PESEL";
-	cin >> charactersFromUser;
-
-	int length = charactersFromUser.length();
-
-	if (charactersFromUser[3] == 8 &&
-		charactersFromUser[3] == 9)
-	{
-
-	}
-}
-
 //Program implementujący algorytm szyfrowania Cezara(proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).
-void task12()
+void task11()
 {
 	string charactersFromUser, codedCharacters = " ", temp = " ";
 	cout << "podaj wyraz\n";
