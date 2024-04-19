@@ -33,6 +33,7 @@ void task2()
 	}
 
 	cout << "\n\n";
+	avarage = 0;
 
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
@@ -43,8 +44,62 @@ void task2()
 	cout << "srednia wynosi " << avarage;
 }
 
+void task3()
+{
+	const unsigned int ARRAY_SIZE = 10;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(NULL));
+	cout << "liczby w kolekcji: \n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % 101;
+		cout << numbers[i] << ", ";
+	}
+	int smallestNumber = numbers[0], biggestNumber = numbers[0];
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		if (numbers[i] > biggestNumber)
+		{
+			biggestNumber = numbers[i];
+		}
+		if (smallestNumber > numbers[i])
+		{
+			smallestNumber = numbers[i];
+		}
+	}
+	cout << "\nnajwieksza liczba " << biggestNumber << "\n";
+	cout << "mniejsza liczba " << smallestNumber << "\n";
+}
+
+void task4()
+{
+	int dayFromUser;
+	string days[7];
+	days[0] = "poniedzialek";
+	days[1] = "wtorek";
+	days[2] = "sroda";
+	days[3] = "czwartek";
+	days[4] = "piatek";
+	days[5] = "sobota";
+	days[6] = "niedziela";
+
+	cout << "podaj numer dnia tygodnia\n";
+	cin >> dayFromUser;
+
+	if (dayFromUser < 8 && dayFromUser > 0)
+	{
+
+		cout << "jest " << days[dayFromUser - 1];
+	}
+	else
+	{
+		cout << "nie ma takiego dnia";
+	}
+}
+
 int main()
 {
-	task2();
+	task4();
 }
 //a
