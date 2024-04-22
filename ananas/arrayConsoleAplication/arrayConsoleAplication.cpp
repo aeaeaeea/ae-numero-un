@@ -75,14 +75,14 @@ void task3()
 void task4()
 {
 	int dayFromUser;
-	string days[7];
-	days[0] = "poniedzialek";
+	string days[7]{ "poniedzialek", "wtorek", "sroda", "czwartek", "piatek", "sobota", "niedziela" };
+	/*days[0] = "poniedzialek";
 	days[1] = "wtorek";
 	days[2] = "sroda";
 	days[3] = "czwartek";
 	days[4] = "piatek";
 	days[5] = "sobota";
-	days[6] = "niedziela";
+	days[6] = "niedziela"; */
 
 	cout << "podaj numer dnia tygodnia\n";
 	cin >> dayFromUser;
@@ -98,8 +98,79 @@ void task4()
 	}
 }
 
+void task5()
+{
+	int tempNumber = 0, tabelNumber;
+
+	const unsigned int ARRAY_SIZE = 10;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(NULL));
+	cout << "liczby w kolekcji: \n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % 101;
+		cout << numbers[i] << ", ";
+	}
+
+	for (int i = 0; i < ARRAY_SIZE - 1; i++)
+	{
+		for (int j = i + 1; j < ARRAY_SIZE; j++)
+		{
+			if (numbers[j] < numbers[i])
+			{
+				tempNumber = numbers[i];
+				numbers[i] = numbers[j];
+				numbers[j] = tempNumber;
+				tabelNumber = j;
+			}
+		}
+	}
+	cout << "\n";
+
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		cout << numbers[i] << ", ";
+	}
+}
+
+void task6()
+{
+	const unsigned int ARRAY_SIZE = 10;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(NULL));
+	cout << "liczby w kolekcji: \n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % 101;
+		cout << numbers[i] << ", ";
+	}
+	cout << "\n\n";
+
+	for (int i = 0; i < ARRAY_SIZE - 1; i++)
+	{
+		int minNumberLocation = i;
+		for (int j = i + 1; j < ARRAY_SIZE; j++)
+		{
+			if (numbers[j] < numbers[minNumberLocation])
+			{
+				minNumberLocation = j;
+			}
+			int tmp = numbers[i];
+			numbers[i] = numbers[minNumberLocation];
+			numbers [minNumberLocation] = tmp;
+		}
+	}
+
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		cout << numbers[i];
+	}
+}
+
 int main()
 {
-	task4();
+	task5();
 }
 //aa
