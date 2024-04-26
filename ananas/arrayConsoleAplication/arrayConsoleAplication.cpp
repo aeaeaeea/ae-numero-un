@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 
+
 using namespace std;
 
 void task1()
@@ -169,8 +170,35 @@ void task6()
 	}
 }
 
+void task7()
+{
+	const unsigned int ARRAY_SIZE = 50;
+	bool sieve[ARRAY_SIZE];
+	cout << "liczby pierwsze: \n";
+	for (int i = 2; i < ARRAY_SIZE; i++)
+	{
+		sieve[i] = true;
+	}
+
+	for (int i = 2; i < ARRAY_SIZE; i++)
+	{
+		if (sieve[i]/* == true*/)
+		{
+			for (int j = i + i; j < ARRAY_SIZE; j = j + i)
+			{
+				sieve[j] = false;
+			}
+		}
+	}
+	for (int i = 2; i < ARRAY_SIZE; i++)
+	{	
+		if(sieve[i]/* == true*/)
+		cout << i << ", ";
+	}
+}
+
 int main()
 {
-	task5();
+	task7();
 }
 //aa
