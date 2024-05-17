@@ -1,5 +1,17 @@
 ﻿#include <iostream>
 
+/*
+    DRY - Don't repeat yourself.
+    KISS - Keep it simple, stupid.
+    YAGNI - You aren't gonna need it.
+    SOLID:
+        S - Single responsibility. - kod odpowiedzialny za jedna czynnosc
+        O - 
+        L -
+        I -
+        D -
+*/
+
 //napisz program, który wczyta od użytkownika jego wiek a następnie wyświetli go na konsoli.
 void task1()
 {
