@@ -6,34 +6,61 @@ using namespace std;
 
 funkcja - zbiór instrukcji. definicja/deklaracja funkcji sklada sę z dwóch cześci:
 * nagówek - sposób uzycia funkcji
-    - typ zwracany
-    - nazwa(poprawny identyfiaktor)
-    - parametrów w nawiasie (nieobowiąznowe)
+	- typ zwracany
+	- nazwa(poprawny identyfiaktor)
+	- parametrów w nawiasie (nieobowiąznowe)
 * ciało - zbiór instrukcji
 
 typZwracany nazwaFunkcji(parametry)
 {
-    //ciało funkcji
+	//ciało funkcji
 }
 */
 
 void showHello()
 {
-    cout << "hello world\n";
+	cout << "hello world\n";
 }
 
 void showWelcome(string n)
 {
-    cout << "siema " << n <<"\n";
+	cout << "siema " << n << "\n";
+}
+void showWelcome(string n, int w)
+{
+	showWelcome(n);
+	cout << "wiek to " << w << "\n";
+}
+void showWelcome(string n, int w, string a)
+{
+	showWelcome(n, w);
+	cout << "adres to " << a << "\n";
+}
+
+void parameter(int& p)
+{
+	cout << "wartosc parametru " << p << "\n";
+	p++;
+	cout << "wartosc parametru " << p << "\n";
 }
 
 int main()
 {
-    showHello();
-    string name;
-    name = "maciek";
-    showWelcome(name);
-    name = "Jan";
-    showWelcome(name);
-    showWelcome("Anna");
+	/*
+	showHello();
+	string name;
+	name = "maciek";
+	showWelcome(name);
+	name = "Jan";
+	showWelcome(name);
+	showWelcome("Anna");
+	showWelcome("maciuś", 9, "[redacted]");
+	*/
+
+	//parameter(98) || przez parameter nie mozna przekazac stalej
+
+	int variable = 5;
+	cout << "wartosc zmiennej przed funkcja " << variable << "\n";
+	parameter(variable);
+	cout << "wartosc zmiennej po funkcji " << variable << "\n";
 }
