@@ -44,6 +44,20 @@ void parameter(int& p)
 	cout << "wartosc parametru " << p << "\n";
 }
 
+void sum(int firstNumber, int secondNumber, int& result)
+{
+	int r;
+	r = firstNumber + secondNumber;
+	result = r;
+}
+
+void sum(int firstNumber, int secondNumber)
+{
+	int r;
+	r = firstNumber + secondNumber;
+	return r;
+}
+
 int main()
 {
 	/*
@@ -63,4 +77,11 @@ int main()
 	cout << "wartosc zmiennej przed funkcja " << variable << "\n";
 	parameter(variable);
 	cout << "wartosc zmiennej po funkcji " << variable << "\n";
+
+	int result;
+	sum(6, 8, result);
+	cout << result << "\n";
+
+	result = sum(15, 7) + 2;
+	cout << result << "\n";
 }
