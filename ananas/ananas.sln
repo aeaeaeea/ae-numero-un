@@ -25,9 +25,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "charactersConsoleAplication
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arrayConsoleAplication", "arrayConsoleAplication\arrayConsoleAplication.vcxproj", "{B612D534-4C48-4F78-AA47-2356DC75569B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "function", "function", "{AA6969A8-DD02-434D-99DF-780F485A3E08}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.function", "04.function", "{AA6969A8-DD02-434D-99DF-780F485A3E08}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "functionConsoleApplication", "functionConsoleApplication\functionConsoleApplication.vcxproj", "{1E8420F9-E00E-4221-92FC-BD27F869C671}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.struktury", "06.struktury", "{8DD0DDA7-1838-48C3-9F04-5C71FA5AF647}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstStruct", "FirstStruct\FirstStruct.vcxproj", "{85DC6BEA-4710-494D-A256-89FA72FD775A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +113,14 @@ Global
 		{1E8420F9-E00E-4221-92FC-BD27F869C671}.Release|x64.Build.0 = Release|x64
 		{1E8420F9-E00E-4221-92FC-BD27F869C671}.Release|x86.ActiveCfg = Release|Win32
 		{1E8420F9-E00E-4221-92FC-BD27F869C671}.Release|x86.Build.0 = Release|Win32
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Debug|x64.ActiveCfg = Debug|x64
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Debug|x64.Build.0 = Debug|x64
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Debug|x86.ActiveCfg = Debug|Win32
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Debug|x86.Build.0 = Debug|Win32
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Release|x64.ActiveCfg = Release|x64
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Release|x64.Build.0 = Release|x64
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Release|x86.ActiveCfg = Release|Win32
+		{85DC6BEA-4710-494D-A256-89FA72FD775A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +135,7 @@ Global
 		{6F49E142-BA65-475E-8120-63FCE309D9CC} = {77AF4591-6551-4FBE-8988-ECC8A0B30A06}
 		{B612D534-4C48-4F78-AA47-2356DC75569B} = {77AF4591-6551-4FBE-8988-ECC8A0B30A06}
 		{1E8420F9-E00E-4221-92FC-BD27F869C671} = {AA6969A8-DD02-434D-99DF-780F485A3E08}
+		{85DC6BEA-4710-494D-A256-89FA72FD775A} = {8DD0DDA7-1838-48C3-9F04-5C71FA5AF647}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63C0399C-A69F-4EA1-8858-2A212EAE9C55}
