@@ -19,14 +19,5 @@ void getCoordinate(double& x, double& y)
 
 void task1()
 {
-	point firstPoint;
-	//point secondPoint;
-	firstPoint.x = 5;
-	//double x, y;
 
-	getCoordinate(x, y);
-
-	double distance = sqrt(x * x + y * y);
-
-	cout << "odleglosc od srodka to " << distance << "\n";
 }
