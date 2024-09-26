@@ -6,4 +6,3 @@ int main()
 {
     task3();
 }
-//a
